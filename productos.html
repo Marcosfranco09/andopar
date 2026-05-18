@@ -246,6 +246,12 @@
 
       // Animaciones
       if (typeof initReveal === 'function') initReveal();
+
+      // Garantizar la remoción del preloader
+      const preloader = document.getElementById('site-preloader');
+      if (preloader && !preloader.classList.contains('hidden')) {
+        preloader.classList.add('hidden');
+      }
     }
 
     document.addEventListener('DOMContentLoaded', initPage);

@@ -61,13 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initFooter();
   initRevealAnimations();
 
-  // Fallback: Ocultar preloader después de 5s por si Firebase falla
+  // Fallback: Ocultar preloader después de 2s por si Firebase falla
   setTimeout(() => {
     const preloader = document.getElementById('site-preloader');
     if (preloader && !preloader.classList.contains('hidden')) {
       preloader.classList.add('hidden');
     }
-  }, 5000);
+  }, 2000);
 });
 
 // Escuchar cambios en tiempo real desde Firebase y refrescar la UI
