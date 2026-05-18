@@ -21,7 +21,7 @@ const DEFAULT_CONFIG = {
   // Identidad
   restaurantName:   'Andopar Centro de Servicios',
   logoText:         'Andopar',
-  logoImage:        'images/logo.png',           // base64 o URL
+  logoImage:        'images/andopar.png',           // base64 o URL
   showLogoText:     true,                       // Mostrar texto junto al logo
   logoFontFamily:   "'Outfit', sans-serif",       // Fuente del texto del logo
   logoScale:        1.3,                         // Escala del logo (0.5 a 3.0)
@@ -217,6 +217,11 @@ class AppConfig {
       this._save(KEYS.CATEGORIES, this.categories);
       this._save(KEYS.PRODUCTS,   this.products);
       this._save(KEYS.BRANCHES,   this.branches);
+    }
+    
+    if (this.config.logoImage === 'images/logo.png') {
+      this.config.logoImage = 'images/andopar.png';
+      this._save(KEYS.CONFIG, this.config);
     }
     
     // Forzar actualización de imágenes si están vacías (para que el usuario vea los cambios)
