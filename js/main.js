@@ -320,18 +320,13 @@ function createProductCard(product) {
         ${product.description ? `<p class="product-card__desc">${escapeHTML(product.description)}</p>` : ''}
         <div class="product-card__footer">
           <span class="product-card__price">${priceStr}</span>
-          <button class="btn-add-cart" onclick="event.stopPropagation(); window.quickAdd('${product.id}', event)" title="Añadir al carrito">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
-            </svg>
-          </button>
         </div>
       </div>
     </div>`;
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// LOGICA DE MODAL Y CARRITO
+// LOGICA DE MODAL
 // ═══════════════════════════════════════════════════════════════════════════════
 window.openProductModal = function(productId) {
   const product = window.App.getProductById(productId);
@@ -345,19 +340,12 @@ window.openProductModal = function(productId) {
   const cat = document.getElementById('modal-product-category');
   const desc = document.getElementById('modal-product-desc');
   const price = document.getElementById('modal-product-price');
-  const qtyInput = document.getElementById('modal-product-qty');
-  const addBtn = document.getElementById('modal-add-btn');
 
   if (img) img.src = product.image || 'img/logo.png';
   if (name) name.textContent = product.name;
   if (cat) cat.textContent = window.App.getCategoryName(product.category);
   if (desc) desc.textContent = product.description || 'Sin descripción disponible.';
   if (price) price.textContent = window.App.formatPrice(product.price);
-  if (qtyInput) qtyInput.value = 1;
-
-  if (addBtn) {
-    addBtn.onclick = (e) => window.Cart.add(product, parseInt(document.getElementById('modal-product-qty').value), e);
-  }
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -367,23 +355,6 @@ window.closeProductModal = function() {
   const modal = document.getElementById('product-modal');
   if (modal) modal.classList.remove('active');
   document.body.style.overflow = '';
-};
-
-window.changeQty = function(delta) {
-  const input = document.getElementById('modal-product-qty');
-  if (!input) return;
-  let val = parseInt(input.value) + delta;
-  if (val < 1) val = 1;
-  input.value = val;
-};
-
-window.quickAdd = function(productId, e) {
-  const product = window.App.getProductById(productId);
-  if (product) window.Cart.add(product, 1, e);
-};
-
-window.addToCart = function(product, qty) {
-  window.Cart.add(product, qty);
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════

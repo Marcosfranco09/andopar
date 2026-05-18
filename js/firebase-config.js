@@ -3,13 +3,14 @@
  */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD4maF2nEIfNng-7iMymqh332jN8Iu7RhY",
-  authDomain: "restaurant-70edc.firebaseapp.com",
-  databaseURL: "https://restaurant-70edc-default-rtdb.firebaseio.com",
-  projectId: "restaurant-70edc",
-  storageBucket: "restaurant-70edc.firebasestorage.app",
-  messagingSenderId: "596427225740",
-  appId: "1:596427225740:web:b056fa372c8108e521d9a9"
+  apiKey: "AIzaSyDbCbhqXqdRyIqU-DGCJl7FZKXvEl9yXo8",
+  authDomain: "andopar-30680.firebaseapp.com",
+  databaseURL: "https://andopar-30680-default-rtdb.firebaseio.com",
+  projectId: "andopar-30680",
+  storageBucket: "andopar-30680.firebasestorage.app",
+  messagingSenderId: "195012338067",
+  appId: "1:195012338067:web:3f60911717388d132dc866",
+  measurementId: "G-4GN3YX0040"
 };
 
 // Exportar para usar en otros scripts
