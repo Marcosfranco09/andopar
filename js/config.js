@@ -33,7 +33,7 @@ const DEFAULT_CONFIG = {
   heroTitle:        'Donde cada sabor cuenta una historia inolvidable',
   heroSubtitle:     'Descubrí una propuesta gastronómica única, elaborada con los ingredientes más exclusivos del mercado.',
   heroBgImage:      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&auto=format&fit=crop&q=80',           // base64 o URL de la imagen de fondo del hero
-  heroBtn1Text:     'Ver Nuestra Carta',
+  heroBtn1Text:     'Ver Nuestros Productos',
   heroBtn1Link:     'productos.html',
   heroBtn2Text:     'Hacer Pedido Online',
   heroBtn2Link:     'https://wa.me/595982300307',
@@ -266,11 +266,22 @@ class AppConfig {
     if (productsUpdated) this._save(KEYS.PRODUCTS, this.products);
     if (branchesUpdated) this._save(KEYS.BRANCHES, this.branches);
     
-    // También para el hero si es el default antiguo
+    let configUpdated = false;
     if (this.config.heroBgImage === 'images/hero-bg.png') {
       this.config.heroBgImage = DEFAULT_CONFIG.heroBgImage;
       this.config.heroFilterColor = DEFAULT_CONFIG.heroFilterColor;
       this.config.heroFilterOpacity = DEFAULT_CONFIG.heroFilterOpacity;
+      configUpdated = true;
+    }
+    if (this.config.heroBtn1Text === 'Ver Nuestra Carta') {
+      this.config.heroBtn1Text = 'Ver Nuestros Productos';
+      configUpdated = true;
+    }
+    if (this.config.productsTitle === 'Nuestra Carta') {
+      this.config.productsTitle = 'Nuestros Productos';
+      configUpdated = true;
+    }
+    if (configUpdated) {
       this._save(KEYS.CONFIG, this.config);
     }
   }
