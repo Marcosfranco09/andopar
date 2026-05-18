@@ -19,46 +19,46 @@ const KEYS = {
 // ─── Configuración por defecto ────────────────────────────────────────────────
 const DEFAULT_CONFIG = {
   // Identidad
-  restaurantName:   'Elite Dining',
-  logoText:         'Elite Dining',
+  restaurantName:   'Andopar Centro de Servicios',
+  logoText:         'Andopar',
   logoImage:        'images/logo.png',           // base64 o URL
-  showLogoText:     false,                       // Mostrar texto junto al logo
-  logoFontFamily:   "'Inter', sans-serif",       // Fuente del texto del logo
-  logoScale:        1.5,                         // Escala del logo (0.5 a 3.0)
+  showLogoText:     true,                       // Mostrar texto junto al logo
+  logoFontFamily:   "'Outfit', sans-serif",       // Fuente del texto del logo
+  logoScale:        1.3,                         // Escala del logo (0.5 a 3.0)
   logoX:            0,                           // Posición X del logo en nav
   logoY:            0,                           // Posición Y del logo en nav
-  tagline:          'La excelencia en cada plato',
+  tagline:          'Neumáticos, Combustibles y Repuestos Premium Scania',
 
   // Hero
-  heroTitle:        'Donde cada sabor cuenta una historia inolvidable',
-  heroSubtitle:     'Descubrí una propuesta gastronómica única, elaborada con los ingredientes más exclusivos del mercado.',
-  heroBgImage:      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&auto=format&fit=crop&q=80',           // base64 o URL de la imagen de fondo del hero
+  heroTitle:        'Potencia y Rendimiento en Cada Kilómetro',
+  heroSubtitle:     'El centro de servicios líder para tu flota. Ofrecemos neumáticos de alta durabilidad, combustibles de máxima calidad y repuestos premium para camiones Scania.',
+  heroBgImage:      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&auto=format&fit=crop&q=80',           // base64 o URL de la imagen de fondo del hero
   heroBtn1Text:     'Ver Nuestros Productos',
   heroBtn1Link:     'productos.html',
-  heroBtn2Text:     'Hacer Pedido Online',
+  heroBtn2Text:     'Consultar por WhatsApp',
   heroBtn2Link:     'https://wa.me/595982300307',
   heroFilterColor:  '#000000',               // Negro para mejor contraste
-  heroFilterOpacity: 0.5,                   // Opacidad ajustada
+  heroFilterOpacity: 0.6,                   // Opacidad ajustada
 
   // Contacto
-  contactTitle:     '¿Tenés alguna consulta?',
-  contactSubtitle:  'Dejanos un mensaje',
-  contactBgImage:   'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&auto=format&fit=crop&q=70',
-  contactFilterColor: '#b40000',
-  contactFilterOpacity: 0.75,
+  contactTitle:     '¿Tenés alguna consulta sobre tu flota?',
+  contactSubtitle:  'Escribinos y te asesoramos al instante',
+  contactBgImage:   'https://images.unsplash.com/photo-1516594798947-e65505dbb29d?w=1200&auto=format&fit=crop&q=70',
+  contactFilterColor: '#0a0a0a',
+  contactFilterOpacity: 0.8,
   whatsappNumber:   '595982300307',
   contactPhone:     '(0982) 300307',
-  contactEmail:     'contacto@restaurante.com',
-  email:            'contacto@restaurante.com',
+  contactEmail:     'contacto@andopar.com.py',
+  email:            'contacto@andopar.com.py',
 
   // Estilo Navbar
   navStyleMode:     'blur',                      // 'blur' o 'color'
   navColor:         '#000000',
 
-  // Colores (CSS variables)
-  colorPrimary:     '#1a1a1a',
-  colorPrimaryDark: '#111111',
-  colorAccent:      '#D4AF37',
+  // Colores (CSS variables) - Rojo deportivo y premium
+  colorPrimary:     '#E31B23',
+  colorPrimaryDark: '#B31217',
+  colorAccent:      '#FFC107',
   colorBgDark:      '#0a0a0a',
   colorBgLight:     '#f5f5f5',
 
@@ -69,7 +69,7 @@ const DEFAULT_CONFIG = {
   socialWhatsapp:   '',
 
   // Footer
-  footerTagline:    'La excelencia en cada plato',
+  footerTagline:    'Servicios y repuestos de alta gama para vehículos pesados',
   footerCopyright:  'Todos los derechos reservados.',
   footerLogoScale:  1.0,
   footerLogoX:      0,
@@ -80,11 +80,11 @@ const DEFAULT_CONFIG = {
 
   // Sección locales
   branchesTitle:    'Nuestros Locales',
-  branchesSubtitle: 'Encontranos en las mejores ubicaciones',
+  branchesSubtitle: 'Encontranos en las mejores ubicaciones del país',
 
   // Sección productos
   productsTitle:    'Nuestros Productos',
-  productsSubtitle: 'Una selección especial para vos',
+  productsSubtitle: 'Una selección premium de alta resistencia',
   productsPreviewCount: 4,        // 4 u 8 tarjetas en el inicio
   theme:            'dark',      // 'light' o 'dark'
   navTextColor:     '#ffffff',
@@ -94,126 +94,105 @@ const DEFAULT_CONFIG = {
 const DEFAULT_BRANCHES = [
   {
     id: 'branch-1',
-    name: 'Local Principal',
-    address: 'Av. Principal 123, Centro',
-    phone: '+595 21 000-000',
-    hours: 'Lunes a domingo: 11:00 a 23:00hs',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80',
+    name: 'Centro de Servicios Andopar - Central',
+    address: 'Av. Madame Lynch 1420, Asunción',
+    phone: '+595 21 600-000',
+    hours: 'Lunes a Sábado: 07:00 a 20:00hs',
+    image: 'https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?w=800&auto=format&fit=crop&q=80',
     mapsUrl: 'https://goo.gl/maps/example1',
     active: true,
   },
   {
     id: 'branch-2',
-    name: 'Shopping Central',
-    address: 'Shopping Central, Local 45',
-    phone: '+595 21 000-001',
-    hours: 'Lunes a domingo: 10:00 a 22:00hs',
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&auto=format&fit=crop&q=80',
+    name: 'Estación Andopar - Ciudad del Este',
+    address: 'Ruta PY02, Km 4, Ciudad del Este',
+    phone: '+595 61 500-000',
+    hours: 'Lunes a Domingo: 24hs (Combustible)',
+    image: 'https://images.unsplash.com/photo-1527018601619-a508a2be00cd?w=800&auto=format&fit=crop&q=80',
     mapsUrl: 'https://goo.gl/maps/example2',
     active: true,
-  },
-  {
-    id: 'branch-3',
-    name: 'Sucursal Norte',
-    address: 'Av. Norte 456, Barrio Norte',
-    phone: '+595 21 000-002',
-    hours: 'Lunes a sábado: 12:00 a 22:00hs',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80',
-    mapsUrl: 'https://goo.gl/maps/example3',
-    active: true,
-  },
+  }
 ];
 
 // ─── Categorías por defecto ───────────────────────────────────────────────────
 const DEFAULT_CATEGORIES = [
-  { id: 'cat-1', name: 'Platos Principales', slug: 'principales', active: true },
-  { id: 'cat-2', name: 'Entradas',           slug: 'entradas',    active: true },
-  { id: 'cat-3', name: 'Postres',            slug: 'postres',     active: true },
-  { id: 'cat-4', name: 'Bebidas',            slug: 'bebidas',     active: true },
+  { id: 'cat-neumaticos', name: 'Neumáticos', slug: 'neumaticos', active: true },
+  { id: 'cat-combustibles', name: 'Combustibles', slug: 'combustibles', active: true },
+  { id: 'cat-scania', name: 'Repuestos Scania', slug: 'repuestos-scania', active: true }
 ];
 
 // ─── Productos por defecto ────────────────────────────────────────────────────
 const DEFAULT_PRODUCTS = [
   {
     id: 'prod-1',
-    name: 'Lomo a la Pimienta',
-    description: 'Tierno medallón de lomo con salsa de pimienta negra y guarnición de papas rústicas.',
-    price: 85000,
-    category: 'cat-1',
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80',
+    name: 'Neumático de Tracción 295/80R22.5',
+    description: 'Neumático premium diseñado para ejes de tracción de camiones de larga distancia. Alta resistencia al desgaste y máximo agarre en mojado.',
+    price: 2850000,
+    category: 'cat-neumaticos',
+    image: 'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?w=800&auto=format&fit=crop&q=80',
     featured: true,
     available: true,
   },
   {
     id: 'prod-2',
-    name: 'Pizza Gourmet',
-    description: 'Masa artesanal, mozzarella de búfala, tomates cherry y albahaca fresca.',
-    price: 65000,
-    category: 'cat-1',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format&fit=crop&q=80',
+    name: 'Neumático Direccional Premium',
+    description: 'Diseño optimizado para ejes de dirección, proporcionando un guiado preciso, desgaste uniforme y reducción del consumo de combustible.',
+    price: 2950000,
+    category: 'cat-neumaticos',
+    image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&auto=format&fit=crop&q=80',
     featured: true,
     available: true,
   },
   {
     id: 'prod-3',
-    name: 'Bruschettas Mixtas',
-    description: 'Pan de campo tostado con variedad de toppings mediterráneos.',
-    price: 35000,
-    category: 'cat-2',
-    image: 'https://images.unsplash.com/photo-1541529086526-db283c563270?w=800&auto=format&fit=crop&q=80',
-    featured: false,
+    name: 'Diésel Euro 6 Extra Power',
+    description: 'Combustible diésel de ultra bajo azufre formulado con aditivos detergentes de última generación que limpian los inyectores y mejoran el torque.',
+    price: 9500,
+    category: 'cat-combustibles',
+    image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&auto=format&fit=crop&q=80',
+    featured: true,
     available: true,
   },
   {
     id: 'prod-4',
-    name: 'Volcán de Chocolate',
-    description: 'Bizcocho tibio con corazón fundido de chocolate amargo y helado de vainilla.',
-    price: 32000,
-    category: 'cat-3',
-    image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop&q=80',
+    name: 'Nafta Súper Aditivada 97 Octanos',
+    description: 'Nafta premium de máxima pureza para motores de alta exigencia. Reduce fricción interna, limpia impurezas y optimiza la potencia.',
+    price: 8900,
+    category: 'cat-combustibles',
+    image: 'https://images.unsplash.com/photo-1527018601619-a508a2be00cd?w=800&auto=format&fit=crop&q=80',
     featured: false,
     available: true,
   },
   {
     id: 'prod-5',
-    name: 'Bowl Veggie Nutritivo',
-    description: 'Mix de quinoa, palta, garbanzos crocantes y vegetales de estación.',
-    price: 45000,
-    category: 'cat-1',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format&fit=crop&q=80',
-    featured: false,
+    name: 'Filtro de Aceite Scania G-Series',
+    description: 'Filtro original Scania diseñado para atrapar las partículas más finas de hollín y metal, asegurando la óptima lubricación del motor DC13.',
+    price: 350000,
+    category: 'cat-scania',
+    image: 'https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=800&auto=format&fit=crop&q=80',
+    featured: true,
     available: true,
   },
   {
     id: 'prod-6',
-    name: 'Limonada con Menta',
-    description: 'Refrescante limonada casera con menta fresca y jengibre.',
-    price: 18000,
-    category: 'cat-4',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf76589fd8?w=800&auto=format&fit=crop&q=80',
+    name: 'Pastillas de Freno Scania Heavy Duty',
+    description: 'Juego de pastillas de freno de alto rendimiento para ejes traseros Scania. Excelente disipación térmica y vida útil prolongada bajo carga extrema.',
+    price: 1250000,
+    category: 'cat-scania',
+    image: 'https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=800&auto=format&fit=crop&q=80',
     featured: false,
     available: true,
   },
   {
     id: 'prod-7',
-    name: 'Tabla de Quesos',
-    description: 'Variedad de quesos nacionales e importados acompañados de frutos secos.',
-    price: 75000,
-    category: 'cat-2',
-    image: 'https://images.unsplash.com/photo-1544124499-58912cbddaad?w=800&auto=format&fit=crop&q=80',
+    name: 'Óptica Delantera LED Scania R-Series',
+    description: 'Faros delanteros LED completos de repuesto para modelos Scania R y Streamline. Resistencia superior a vibraciones e iluminación de alta definición.',
+    price: 2400000,
+    category: 'cat-scania',
+    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&auto=format&fit=crop&q=80',
     featured: true,
     available: true,
-  },
-  {
-    id: 'prod-8',
-    name: 'Cheesecake de Frutos Rojos',
-    description: 'Clásico cheesecake neoyorquino con coulis de frutos del bosque.',
-    price: 28000,
-    category: 'cat-3',
-    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&auto=format&fit=crop&q=80',
-    featured: false,
-    available: true,
-  },
+  }
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -226,6 +205,19 @@ class AppConfig {
     this.products   = this._load(KEYS.PRODUCTS,   DEFAULT_PRODUCTS);
     this.categories = this._load(KEYS.CATEGORIES, DEFAULT_CATEGORIES);
     this.branches   = this._load(KEYS.BRANCHES,   DEFAULT_BRANCHES);
+    
+    // Autodetectar datos heredados de restaurante y forzar migración al nuevo rubro automotriz/camiones
+    if (this.categories.some(c => c.id === 'cat-1')) {
+      console.log("Detectados datos antiguos de restaurante. Migrando automáticamente al nuevo rubro de Neumáticos, Combustibles y Repuestos Scania...");
+      this.config     = Object.assign({}, DEFAULT_CONFIG);
+      this.categories = DEFAULT_CATEGORIES;
+      this.products   = DEFAULT_PRODUCTS;
+      this.branches   = DEFAULT_BRANCHES;
+      this._save(KEYS.CONFIG,     this.config);
+      this._save(KEYS.CATEGORIES, this.categories);
+      this._save(KEYS.PRODUCTS,   this.products);
+      this._save(KEYS.BRANCHES,   this.branches);
+    }
     
     // Forzar actualización de imágenes si están vacías (para que el usuario vea los cambios)
     this._fillMissingData();
