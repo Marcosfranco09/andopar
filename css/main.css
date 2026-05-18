@@ -625,8 +625,9 @@ h4 {
 
 .branches__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .branch-card {
@@ -641,14 +642,14 @@ h4 {
 
 .branch-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
   z-index: 10;
   border-color: var(--color-accent);
 }
 
 .branch-card__img {
   position: relative;
-  height: 180px;
+  height: 280px;
   overflow: hidden;
 }
 
@@ -1533,6 +1534,10 @@ h4 {
     grid-template-columns: 1fr;
   }
 
+  .branch-card__img {
+    height: 200px;
+  }
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1640,11 +1645,14 @@ h4 {
 }
 
 .navbar__search-wrap {
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
   max-width: 560px;
-  position: relative;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .navbar__search-icon {
